@@ -1,0 +1,42 @@
+[package]
+name = "revm-playground"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+# 随机数生成
+rand = "0.8.5"
+# 错误处理
+anyhow = "1.0.71"
+# 并发 HashMap
+dashmap = "5.4.0"
+# 16进制处理
+hex-literal = "0.4"
+hex = "0.4.3"
+# 字节处理
+bytes = "1.4.0"
+# 环境变量
+dotenv = "0.15.0"
+# trait 自动实现
+auto_impl = { version = "1.1", default-features = false }
+# 添加 winapi 依赖，并启用所需特性
+winapi = { version = "0.3", features = ["winerror"] }
+
+
+# async
+# 异步处理库
+futures = "0.3.27"
+tokio = { version = "1.28", features = ["full"] }
+tokio-stream = { version = "0.1", features = ['sync'] }
+
+# logging
+log = "0.4.17"
+fern = {version = "0.6.2", features = ["colored"]}
+chrono = "0.4.23"
+colored = "2.0.0"
+
+
+# Evm
+cfmms = "0.6.2"
+ethers = {version = "2.0",features = ["ws","ipc","rustls","optimism"]}
+
